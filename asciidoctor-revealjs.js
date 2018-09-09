@@ -15,7 +15,7 @@ var asciidoctor = require('asciidoctor.js')();
 require('asciidoctor-reveal.js');
 
 // Convert the document 'presentation.adoc' using the reveal.js converter
-//var attributes = {'revealjsdir': 'node_modules/reveal.js@'};
-var attributes = {'revealjsdir': 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0'};
+var attributes = {'revealjsdir': 'node_modules/reveal.js@'};
+//var attributes = {'revealjsdir': 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0'};
 var options = {safe: 'safe', backend: 'revealjs', attributes: attributes};
 asciidoctor.convertFile(adoc, options);
