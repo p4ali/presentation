@@ -1,0 +1,88 @@
+= Presentation with https://asciidoctor.org[Asciidoc] + https://github.com/hakimel/reveal.js[Reveajs] on https://pages.github.com[Github Page]
+ifdef::env-github,env-browser[]
+:toc: preamble
+:toclevels: 2
+endif::[]
+ifdef::env-github[]
+:branch: master
+:status:
+:outfilesuffix: .adoc
+:!toc-title:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+:uri-project-repo: https://github.com/asciidoctor/asciidoctor-reveal.js
+:uri-asciidoctor: https://github.com/asciidoctor/asciidoctor
+:uri-asciidoctorjs: https://github.com/asciidoctor/asciidoctor.js
+:uri-revealjs-home: http://lab.hakim.se/reveal-js/
+:uri-revealjs-gh: https://github.com/hakimel/reveal.js
+:uri-nodejs-download: https://nodejs.org/en/download/
+
+ifdef::env-github[]
+//image:https://travis-ci.org/asciidoctor/asciidoctor-reveal.js.svg?branch=master[Build Status,link=https://travis-ci.org/asciidoctor/asciidoctor-reveal.js]
+//image:http://img.shields.io/gem/v/asciidoctor-revealjs.svg[gem, link=https://rubygems.org/gems/asciidoctor-revealjs]
+image:https://img.shields.io/travis/asciidoctor/asciidoctor/master.svg[Build Status (Travis CI), link=https://travis-ci.org/asciidoctor/asciidoctor]
+image:https://travis-ci.org/hakimel/reveal.js.svg?branch=master[revealjs, link=https://travis-ci.org/hakimel/reveal.js]
+image:http://img.shields.io/npm/v/asciidoctor-reveal.js.svg[npm, link=https://www.npmjs.org/package/asciidoctor-reveal.js]
+image:https://s3.amazonaws.com/static.slid.es/images/slides-github-banner-320x40.png?1[try revealjs editor, link=https://slides.com?ref=github, width=160, height=20]
+endif::[]
+
+== Goal
+
+* version control your presentation
+* easy to create presentation
+* take the best of all: Asciidoc and Revealjs, and github
+
+https://p4ali.github.io/presentation/presentation.html[View slides]
+
+== Steps
+
+=== Clone this repo
+
+[source, bash]
+----
+$ git clone git@github.com:p4ali/presentation.git
+$ cd presentation
+$ npm install
+----
+
+=== Create .adoc as presentation
+
+.Many editor support Asciidoc well:
+* https://atom.io/users/asciidoctor[Atom]
+* https://plugins.jetbrains.com/plugin/7391-asciidoc[InteliJ]
+* https://github.com/asciidoctor/sublimetext-asciidoc[Sublime]
+
+Please refer to both https://github.com/asciidoctor/asciidoctor-reveal.js[asciidoctor-revealjs] and https://asciidoctor.org[Asciidoc] for syntax.
+
+Save the file as `presentation.adoc` (or any name you want under any folder)
+
+=== Convert .adoc to .html with https://github.com/asciidoctor/asciidoctor-reveal.js[asciidoctor-revealjs plugin]
+
+[source, bash]
+----
+$ ./asciidoctor-revealjs.js presentation.adoc 
+$ open presentation.html
+----
+
+The `presentation.html` is the final presentation to show with browser.
+
+TIP: The `asciidoctor-revealjs.js` will respect the path of .adoc file, and will genereate the .html file in the same path. This allow you to use subfolder for different presentation.
+
+TIP: For more detail regarding run Revealjs locally, please refer to https://github.com/hakimel/reveal.js, secton Basic setup or Full setup.
+
+=== Publish presentation to Github
+
+Go to https://pages.github.com[Github Page], and follow the 5 steps to start.
+
+By default, the presentaiton URL is pointing to the index.html. In reality, you may create a README.adoc, and add link to specific .html (Like https://stevegrunwell.com/blog/building-presentations-reveal-js-2/[Steve recommended]). For example, here is the link to the https://p4ali.github.io/presentation/presentation.html[presentation]
+
+TIP: You can read the presentation url from Repository Settings > Github Pages section. If not , select your source branch and save. After that, you should get presentation url.
+
+== Reference
+* https://github.com/hakimel/reveal.js[reveal.js]
+* https://github.com/asciidoctor/asciidoctor-reveal.js/[asciidoctor-reveal.js]
+* https://stevegrunwell.com/blog/building-presentations-reveal-js-2/[Building Presentations with Reveal.js]

@@ -1,0 +1,14 @@
+{
+  "name": "presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "asciidoctor-reveal.js": "^1.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Li <ali@example.com> (example.com)",
+  "license": "MIT"
+}

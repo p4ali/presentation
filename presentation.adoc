@@ -1,0 +1,19 @@
+= Title Slide
+// depending on your npm version, you might need to override the default
+// 'revealjsdir' value by removing the comments from the line below:
+//:revealjsdir: node_modules/asciidoctor-reveal.js/node_modules/reveal.js
+
+== Slide One
+
+* Foo
+* Bar
+* World
+
+[NOTE.speaker]
+--
+Actually thera are more...
+--
+
+== !
+
+image:images/twitter.png[Twitter]
