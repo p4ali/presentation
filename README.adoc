@@ -49,6 +49,8 @@ $ cd presentation
 $ npm install
 ----
 
+NOTE: Alternately, you can download the recent release of revealjs.js and save it under node_modules. The current version in this repo is 3.6.0
+
 === Create .adoc as presentation
 
 .Many editor support Asciidoc well:
@@ -81,6 +83,12 @@ Go to https://pages.github.com[Github Page], and follow the 5 steps to start.
 By default, the presentaiton URL is pointing to the index.html. In reality, you may create a README.adoc, and add link to specific .html (Like https://stevegrunwell.com/blog/building-presentations-reveal-js-2/[Steve recommended]). For example, here is the link to the https://p4ali.github.io/presentation/presentation.html[presentation]
 
 TIP: You can read the presentation url from Repository Settings > Github Pages section. If not , select your source branch and save. After that, you should get presentation url.
+
+CAUTION: Github (or CDN) may cache your presentation for a while, in which case, if you update your presentations in a row in a short time, it may not show the latest presentation. Wait few  minutes, try again, it should work.
+
+== Best Practice?
+
+I am lazy and prefer to host all presentations in subfolders of same repo unless it grows too big. Please refer to link:another_present[another_present] for detail. 
 
 == Reference
 * https://github.com/hakimel/reveal.js[reveal.js]

@@ -1,0 +1,53 @@
+== Presentation in subfolder
+ifdef::env-github,env-browser[]
+:toc: preamble
+:toclevels: 3 
+endif::[]
+ifdef::env-github[]
+:branch: master
+:status:
+:outfilesuffix: .adoc
+:!toc-title:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+:uri-project-repo: https://github.com/asciidoctor/asciidoctor-reveal.js
+:uri-asciidoctor: https://github.com/asciidoctor/asciidoctor
+:uri-asciidoctorjs: https://github.com/asciidoctor/asciidoctor.js
+:uri-revealjs-home: http://lab.hakim.se/reveal-js/
+:uri-revealjs-gh: https://github.com/hakimel/reveal.js
+:uri-nodejs-download: https://nodejs.org/en/download/
+
+ifdef::env-github[]
+//image:https://travis-ci.org/asciidoctor/asciidoctor-reveal.js.svg?branch=master[Build Status,link=https://travis-ci.org/asciidoctor/asciidoctor-reveal.js]
+//image:http://img.shields.io/gem/v/asciidoctor-revealjs.svg[gem, link=https://rubygems.org/gems/asciidoctor-revealjs]
+image:https://img.shields.io/travis/asciidoctor/asciidoctor/master.svg[Build Status (Travis CI), link=https://travis-ci.org/asciidoctor/asciidoctor]
+image:https://travis-ci.org/hakimel/reveal.js.svg?branch=master[revealjs, link=https://travis-ci.org/hakimel/reveal.js]
+image:http://img.shields.io/npm/v/asciidoctor-reveal.js.svg[npm, link=https://www.npmjs.org/package/asciidoctor-reveal.js]
+image:https://s3.amazonaws.com/static.slid.es/images/slides-github-banner-320x40.png?1[try revealjs editor, link=https://slides.com?ref=github, width=160, height=20]
+endif::[]
+
+How to organize your presnetation?
+
+This talk focuses on the developers. How to promote yourself by giving presentation? We will touch some basic usecase.
+
+https://p4ali.github.io/presentation/another_present/present1.html[View slides]
+
+=== Presentation History
+
+=== Notes
+
+This talk is tailored for a specific group.
+
+NOTE: This is a note
+
+TIP: Here is a tip
+
+IMPORTANT: Don't forget
+
+WARNING: Never do this
+
+CAUTION: Becarefule

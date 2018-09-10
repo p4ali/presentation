@@ -7,4 +7,8 @@
 Indeed...
 --
 
+== !
+
+image:images/slack.png[Slack]
+
 
