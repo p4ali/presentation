@@ -90,7 +90,58 @@ CAUTION: Github (or CDN) may cache your presentation for a while, in which case,
 
 I am lazy and prefer to host all presentations in subfolders of same repo unless it grows too big. Please refer to link:another_present[another_present] for detail. 
 
+== diagrams
+
+`ditaa`:
+[ditaa]
+----
+                   +-------------+
+                   | asciidoctor |-------+
+                   |  diagram    |       |
+                   +-------------+       | png out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        | --+ asciidoctor +--> |               |
+ |  Text  |   +-------------+    |Beatiful output|
+ |Document|   |   !magic!   |    |               |
+ |     {d}|   |             |    |               |
+ +---+----+   +-------------+    \---------------/
+     :                                   ^
+     |          Lots of work             |
+     +-----------------------------------+
+----
+
+`graphviz`
+[graphviz, "dot_example", "svg"]
+----
+graph ethane {
+     C_0 -- H_0 [type=s];
+     C_0 -- H_1 [type=s];
+     C_0 -- H_2 [type=s];
+     C_0 -- C_1 [type=s];
+     C_1 -- H_3 [type=s];
+     C_1 -- H_4 [type=s];
+     C_1 -- H_5 [type=s];
+}
+----
+
+`plantuml`
+[plantuml, diagram-classes, svg]
+....
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+....
+
 == Reference
 * https://github.com/hakimel/reveal.js[reveal.js]
 * https://github.com/asciidoctor/asciidoctor-reveal.js/[asciidoctor-reveal.js]
 * https://stevegrunwell.com/blog/building-presentations-reveal-js-2/[Building Presentations with Reveal.js]
+* https://github.com/asciidoctor/asciidoctor-diagram/blob/master/examples/features.adoc[asciidoc diagram support]
